@@ -61,3 +61,83 @@
 
 // Utility classes
 @import "utilities.less"; // Has to be last to override when necessary
+
+// DeviceLab
+header, footer{
+  background-color: @cyan;
+  img{
+    display: block;
+    margin: 20px auto;
+  }
+}
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (max-width: 767px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+
+.marketing {
+  text-align: center;
+  color: #5a5a5a;
+  border-bottom: 1px solid @grayLighter;
+  padding-bottom: 40px;
+}
+.marketing h1 {
+  margin: 20px 0 10px;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.marketing p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.marketing .marketing-byline {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #999;
+}
+
+// Tablesort
+th.sort-header {
+  cursor:pointer;
+}
+th.sort-header::-moz-selection,
+th.sort-header::selection {
+  background:transparent;
+}
+table th.sort-header:after {
+  content:'';
+  float:right;
+  margin-top:7px;
+  border-width:0 4px 4px;
+  border-style:solid;
+  border-color:#404040 transparent;
+  visibility:hidden;
+}
+table th.sort-header:hover:after {
+  visibility:visible;
+}
+table th.sort-up:after,
+table th.sort-down:after,
+table th.sort-down:hover:after {
+  visibility:visible;
+  opacity:0.4;
+}
+table th.sort-up:after {
+  border-bottom:none;
+  border-width:4px 4px 0;
+}

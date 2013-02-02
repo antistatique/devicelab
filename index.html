@@ -1,8 +1,126 @@
-<html>
-<head>
-    <title>DeviceLab - Lausanne</title>
-</head>
-<body bgcolor="#00aeef">
-    <h1>DeviceLab</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeviceLab.ch – Open Device Lab in Lausanne by Antistatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/img/apple-touch-icon-72-precomposed.png">
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span12">
+            <img class="logo" src="assets/img/devicelab_logo.png" alt="DeviceLab Lausanne" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="marketing">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span12">
+            <h1>Open Device Lab in Lausanne</h1>
+            <p class="marketing-byline">
+              Lausanne DeviceLab is provided by <a href="http://antistatique.net">Antistatique</a> for local web developers so they can test their work on several devices and make the mobile web a better place.
+            </p>
+            <p>
+              <a href="http://www.twitter.com/DeviceLabCh" class="btn"><i class="icon-user"></i> @deviceLabCH</a>
+              <a href="mailto:hello@devicelab.ch" class="btn"><i class="icon-envelope"></i> hello@devicelab.ch</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <h2>Device list</h2>
+          <a href="mailto:hello@devicelab.ch?subject=I%20have%20a%20Device%20to%20add%20on%20your%20list" class="btn">Contribute ?</a>
+        </div>
+        <div class="span9">
+          <table class="table table-striped" id="devicelist">
+            <thead>
+                <tr>
+                <th>Brand</th>
+                <th>Device</th>
+                <th>OS</th>
+                <th>Screen Size</th>
+                <th>Contributor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apple</td>
+                <td>iPad 1</td>
+                <td>iOS 5.3</td>
+                <td>1024x768</td>
+                <td><a href="http://antistatique.net">Antistatique</a></td>
+              </tr>
+              <tr>
+                <td>HTC</td>
+                <td>HTC Desire</td>
+                <td>Android 2.?</td>
+                <td>?x?</td>
+                <td><a href="http://antistatique.net">Antistatique</a></td>
+              </tr>
+              <tr>
+                <td>RIM</td>
+                <td>Blackbery Bold</td>
+                <td>?</td>
+                <td>?x?</td>
+                <td><a href="http://twitter.com/kidvaldez">Alberto</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section><!--/.fluid-container-->
+    <section class="container-fluid where">
+      <div class="row-fluid">
+        <div class="span3">
+          <h4>Antistatique office</h4>
+          <p>Rue de Sébeillon 9b<br/>Lausanne<br/>Switzerland</p>
+          <a href="https://maps.google.com/maps?q=rue+de+s%C3%A9beillon+9b,+lausanne&hl=en&ie=UTF8&geocode=+&hnear=Rue+de+S%C3%A9beillon+9B,+1004+Lausanne,+Vaud,+Switzerland&t=m&z=16" class="btn">Open in Google Maps</a>
+        </div>
+        <div class="span9">
+          <a href="https://maps.google.com/maps?q=rue+de+s%C3%A9beillon+9b,+lausanne&hl=en&ie=UTF8&geocode=+&hnear=Rue+de+S%C3%A9beillon+9B,+1004+Lausanne,+Vaud,+Switzerland&t=m&z=16"><img src="http://maps.googleapis.com/maps/api/staticmap?center=46.52339566692939,6.615421862426729&zoom=16&size=600x300&maptype=roadmap
+          &markers=color:blue%7Clabel:D%7C46.52339566692939,6.615421862426729&sensor=false"></a>
+        </div>
+      </div>
+    </section><!--/.fluid-container-->
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span12">
+              <a href="http://antistatique.net"><img src="assets/img/devices.png"/></a>
+          </div>
+        </div>
+      </div><!--/.fluid-container-->
+    </footer>
+    <script src="assets/js/tablesort.min.js"></script>
+    <script>
+      new Tablesort(document.getElementById('devicelist'), {
+        descending: true
+      });
+    </script>
+  </body>
 </html>
