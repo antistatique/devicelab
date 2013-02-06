@@ -1,0 +1,200 @@
+@import "bootstrap.less";
+
+
+//=============================================================================
+// MIXINS
+//=============================================================================
+
+.font-size(@sizeValue) {
+  @remValue: (@sizeValue/10);
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+
+
+//=============================================================================
+// MIXINS
+//=============================================================================
+
+@font-face {
+    font-family: 'heroregular';
+    src: url('font/hero-webfont.eot');
+    src: url('font/hero-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/hero-webfont.woff') format('woff'),
+         url('font/hero-webfont.ttf') format('truetype'),
+         url('font/hero-webfont.svg#heroregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+//=============================================================================
+// VARIABLE
+//=============================================================================
+
+@mainFont:                  "proxima-nova-soft", Helvetica, Arial, sans-serif;
+@titleFont:                 'heroregular', Helvetica, Arial, sans-serif;
+
+
+
+//=============================================================================
+// GENERAL
+//=============================================================================
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: @mainFont;
+  .font-size(16px);
+  @media (max-width: 767px) {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: @titleFont;
+}
+
+h1 {
+  .font-size(60px);
+  @media only screen and (max-width: 900px) {.font-size(50px);}
+  @media only screen and (max-width: 767px) {.font-size(40px);}
+  @media only screen and (max-width: 480px) {.font-size(32px);}
+}
+
+h2 {
+  .font-size(32px);
+  @media only screen and (max-width: 767px) {.font-size(26px);}
+}
+
+h3 {
+  .font-size(25px);
+  line-height: 1.2em;
+  @media only screen and (max-width: 767px) {.font-size(20px);}
+}
+
+
+.lt-ie9 body .svg-object {display: none;}
+
+.container-fluid, hr {
+  max-width: 1140px;
+  margin: 0 auto;
+  @media only screen and (max-width: 767px) {padding: 0 10px !important;}
+}
+
+
+//=============================================================================
+// HEADER
+//=============================================================================
+
+header, footer{
+  background-color: @cyan;
+  img{
+    display: block;
+    margin: 50px auto;
+    @media only screen and (max-width: 767px) {
+      margin: 20px auto;
+      max-width: 70%;
+    }
+  }
+}
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (max-width: 767px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+//=============================================================================
+// CONTENT
+//=============================================================================
+
+.marketing {
+  text-align: center;
+  color: #5a5a5a;
+  .btn {
+    @media only screen and (max-width: 767px) {margin-top: 20px;}
+  }
+}
+.marketing h1 {
+  margin: 20px 0 10px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.marketing p {
+  .font-size(16px);
+  line-height: 1.5;
+}
+.marketing .marketing-byline {
+  margin: 30px auto;
+  .font-size(20px);
+  font-weight: 300;
+  line-height: 1.25;
+  color: #999;
+  @media only screen and (min-width: 950px) {max-width: 950px;}
+  @media only screen and (max-width: 767px) {margin-bottom: 0;}
+}
+
+// Tablesort
+th.sort-header {
+  cursor:pointer;
+}
+th.sort-header::-moz-selection,
+th.sort-header::selection {
+  background:transparent;
+}
+table th.sort-header:after {
+  content:'';
+  float:right;
+  margin-top:7px;
+  border-width:0 4px 4px;
+  border-style:solid;
+  border-color:#404040 transparent;
+  visibility:hidden;
+}
+table th.sort-header:hover:after {
+  visibility:visible;
+}
+table th.sort-up:after,
+table th.sort-down:after,
+table th.sort-down:hover:after {
+  visibility:visible;
+  opacity:0.4;
+}
+table th.sort-up:after {
+  border-bottom:none;
+  border-width:4px 4px 0;
+}
+
+.first-col, .last-col {
+  @media only screen and (max-width: 480px) {display: none;}
+}
+
+#map {
+  @media only screen and (max-width: 767px) {margin: 20px 0 30px 0;}
+}
+
+
+//=============================================================================
+// FOOTER
+//=============================================================================
+
+.as-device {
+  max-width: 240px;
+  @media only screen and (max-width: 767px) {max-width: 50%;}
+  @media only screen and (max-width: 480px) {max-width: 70%;}
+}
+
+
+
+
