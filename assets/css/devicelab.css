@@ -682,8 +682,8 @@ ol.inline {
   margin-left: 0;
   list-style: none;
 }
-ul.inline  > li,
-ol.inline  > li {
+ul.inline > li,
+ol.inline > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
@@ -2455,7 +2455,7 @@ table th[class*="span"],
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -5265,6 +5265,23 @@ section {
   .marketing .marketing-byline {
     margin-bottom: 0;
   }
+}
+.media-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 30px 0;
+}
+.media-wrapper iframe,
+.media-wrapper object,
+.media-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 th.sort-header {
   cursor: pointer;
