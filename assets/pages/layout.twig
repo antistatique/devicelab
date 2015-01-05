@@ -9,12 +9,13 @@
   <title>{% block pagetitle %}{% endblock %}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="stylesheet" href="../css/vendors.css">
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
   <div class="container">
     {% block page %}{% endblock %}
+    {% block footer %}{% endblock %}
   </div>
   <script src="../js/vendors.min.js"></script>
   <script src="../js/main.min.js"></script>

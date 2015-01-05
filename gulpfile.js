@@ -20,7 +20,7 @@ gulp.task('vendors', function() {
    * CSS VENDORS
    */
   gulp.src([
-        ''
+        'bower_components/filament-tablesaw/dist/tablesaw.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -44,7 +44,8 @@ gulp.task('vendors', function() {
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js'
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
+      'bower_components/filament-tablesaw/dist/tablesaw.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
