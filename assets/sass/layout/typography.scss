@@ -33,6 +33,11 @@ category: Layout - Typography
 ```
 */
 
+.lead{
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
 
 /*doc
 ---
@@ -96,7 +101,7 @@ category: Layout - Typography
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
   </p>
   <small>
-    Eddard Stark, lord of Winterfel
+    <span>Eddard Stark</span>, lord of Winterfel
   </small>
 </blockquote>
 ```
@@ -109,11 +114,20 @@ category: Layout - Typography
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
   </p>
   <small>
-    Eddard Stark, lord of Winterfel
+    <span>Eddard Stark</span>, lord of Winterfel
   </small>
 </blockquote>
 ```
 */
+
+blockquote{
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+blockquote span{
+  font-weight: 700;
+}
 
 
 /*doc
