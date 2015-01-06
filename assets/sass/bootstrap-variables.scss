@@ -191,7 +191,7 @@ $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 //** Text color for `<input>`s
-$input-color:                    $alto !default;
+$input-color:                    $silver-chalice !default;
 //** `<input>` border color
 $input-border:                   $alto !default;
 
@@ -204,10 +204,10 @@ $input-border-radius-large:      $border-radius-large !default;
 $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             $silver-chalice !default;
 
 //** Placeholder text color
-$input-color-placeholder:        #999 !default;
+$input-color-placeholder:        $silver-chalice !default;
 
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
