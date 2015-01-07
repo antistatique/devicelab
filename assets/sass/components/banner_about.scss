@@ -1,0 +1,65 @@
+/*doc
+---
+title: Banner-About
+name: banner-about
+category: Components - Content-Banners
+---
+
+class example-spacing --> styleguide only (do not use)
+
+```html_example
+<div class="example-spacing">
+  <div class="graywildsand-bg">
+    <div class="row row-banner-about">
+      <div class="col-md-4">
+        <h3 class="h2">About</h3>
+        <p>We have a story</p>
+      </div>
+      <div class="col-md-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu erat at nunc blandit accumsan. Curabitur fermentum, arcu molestie convallis placerat, eros sem placerat ipsum. Nulla et suscipit augue.</p>
+        <h4>How it works ?</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu erat at nunc blandit accumsan. Curabitur fermentum, arcu molestie convallis placerat, eros sem placerat ipsum. Nulla et suscipit augue.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.example-spacing{
+  background-color: $wild-sand;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 0 15px;
+}
+
+.row-banner-about{
+  padding: 40px 0 30px 0;
+  color: $chicago;
+  .col-md-4{
+    h3{
+      margin-top: 0;
+    }
+    p{
+      position: relative;
+      margin-bottom: 35px;
+      &:after{
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 40px;
+        background-color: $alto;
+        left: 0;
+        bottom: -15px;
+      }
+    }
+  }
+  .col-md-8{
+    h4{
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+  }
+}
