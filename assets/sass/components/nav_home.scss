@@ -129,6 +129,13 @@ category: Components - Navigation DeviceLab
             font-size: 13px;
             font-family: "Source Sans Pro", sans-serif;
           }
+          .btn-success{
+            transition: all .1s ease-in-out;
+            &:hover{
+              background-color: $eucalyptus;
+              border-color: $eucalyptus;
+            }
+          }
         }
       }
     }
