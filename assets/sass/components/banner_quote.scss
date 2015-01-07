@@ -1,0 +1,66 @@
+/*doc
+---
+title: Banner-Quote
+name: banner-quote
+category: Components - Content-Banners
+---
+
+
+```html_example
+<div class="graygallery-bg">
+  <blockquote>
+    <p>
+      Avec la diversité des navigateurs et systèmes d’exploitation, il est aujourd’hui incontournable de tester sites et applications mobiles sur un maximum de smartphones et <span>tablettes</span>.
+    </p>
+    <small>
+      <span>Marc Friederich</span>, développeur chez Antistatique.
+    </small>
+  </blockquote>
+</div>
+```
+
+*/
+
+.graygallery-bg{
+  background-color: $gallery;
+  blockquote{
+    margin: 0 auto;
+    border: none;
+    width: 75%;
+    padding: 25px 0 25px 30px;
+    p{
+      font-size: 21px;
+      color: $tarawera;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 7px;
+        height: 12px;
+        width: 18px;
+        background: url(../../img/quote-open.svg) no-repeat center left;
+      }
+      span{
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          right: -35px;
+          top: 6px;
+          height: 12px;
+          width: 18px;
+          background: url(../../img/quote-close.svg) no-repeat center right;
+        }
+      }
+    }
+    small{
+      text-align: right;
+      color: $blue-dianne;
+      margin-top: 17px;
+      &:before{
+        content: none;
+      }
+    }
+  }
+}

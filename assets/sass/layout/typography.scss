@@ -123,9 +123,12 @@ category: Layout - Typography
 blockquote{
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
+  small{
+    font-weight: 400;
+  }
 }
 
-blockquote span{
+blockquote small span{
   font-weight: 700;
 }
 
