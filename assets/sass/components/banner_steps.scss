@@ -1,0 +1,55 @@
+/*doc
+---
+title: Banner-Steps
+name: banner-steps
+category: Components - Content-Banners
+---
+
+
+```html_example
+<div class="graywildsand-bg">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="../../img/icons-steps_Wifi.svg" onerror="this.onerror=null; this.src='../../img/icons-steps_Wifi.png'" alt="connect to our wifi" />
+      <h2 class="h4">1.Connect to our Wifi</h2>
+      <p>Nous disposons d’une connexion internet haut débit pour une expérience</p>
+    </div>
+    <div class="col-md-4">
+      <img src="../../img/icons-steps_Ghost.svg" onerror="this.onerror=null; this.src='../../img/icons-steps_Ghost.png'" alt="connect to our wifi" />
+      <h2 class="h4">2.Launch Ghostlab</h2>
+      <p>Nous utilisons l’application Ghostlab de Vanamco afin de visualiser</p>
+    </div>
+    <div class="col-md-4">
+      <img src="../../img/icons-steps_URL.svg" onerror="this.onerror=null; this.src='../../img/icons-steps_URL.png'" alt="connect to our wifi" />
+      <h2 class="h4">3.Type your URL</h2>
+      <p>Prêt à naviguer. N’oubliez pas de demander une bière à un de nos collaborateurs ;-)</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.graywildsand-bg{
+  background-color: $wild-sand;
+  .row{
+    padding: 15px 0 30px;
+    .col-md-4{
+      text-align: center;
+      padding: 0 40px;
+      img{
+        margin-bottom: -20px;
+      }
+      h2{
+        font-family: "Helvetica Neue", sans-serif;
+        color: $tarawera;
+        font-size: 20px;
+      }
+      p{
+        line-height: 1.5;
+        font-size: 13px;
+        color: $heavy-metal;
+      }
+    }
+  }
+}
