@@ -1,0 +1,51 @@
+/*doc
+---
+title: Banner-LabUp
+name: banner-labup
+category: Components - Content-Banners
+---
+
+
+```html_example
+<div class="lab-up">
+  <p>Membre de l’association <i>Labup!</i> (opendevicelab.com)</p>
+  <button type="button" class="btn btn-primary">LabUp !</button>
+</div>
+```
+
+*/
+
+.lab-up{
+  background-color: $curious-blue;
+  text-align: center;
+  padding: 25px 0;
+  p{
+    display: inline;
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .btn-primary{
+    padding-left: 55px;
+    padding-right: 55px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    transition: all .1s ease-in-out;
+    &:hover{
+      background-color: $matisse;
+      border-color: $matisse;
+    }
+  }
+}
+
+@media (min-width: 580px) {
+  .lab-up{
+    p{
+      margin-right: 15px;
+    }
+    .btn-primary{
+      margin-left: 15px;
+    }
+  }
+}
