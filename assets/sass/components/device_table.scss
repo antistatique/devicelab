@@ -1,0 +1,187 @@
+/*doc
+---
+title: Device-Table
+name: device-table
+category: Components - Device-List
+---
+
+
+```html_example
+<div class="device-list">
+  <h3 class="h2">Devices</h3>
+  <p>Liste des devices que nous avons et tout.</p>
+  <table class="table table-bordered table-device" data-tablesaw-sortable>
+    <thead>
+      <tr>
+        <th data-tablesaw-sortable-col data-tablesaw-sortable-default-col>Brand</th>
+        <th data-tablesaw-sortable-col>Model</th>
+        <th data-tablesaw-sortable-col>OS</th>
+        <th data-tablesaw-sortable-col>Screen size</th>
+        <th data-tablesaw-sortable-col>Contributor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Apple</td>
+        <td>Mac mini</td>
+        <td>OSX 10.9 with Firefox, Chrome, Safari</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>Microsoft</td>
+        <td>iPhone 4  </td>
+        <td>Windows 7 with IE10, IE9 and IE8</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Gillo</td>
+      </tr>
+      <tr>
+        <td>HTC</td>
+        <td>Blackbery 9780  </td>
+        <td>iOS 5.3</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Galaxy S3</td>
+        <td>Symbian OS 9.2</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Alberto</td>
+      </tr>
+      <tr>
+        <td>Microsoft</td>
+        <td>Nexus</td>
+        <td>Android 4.1.2 (Gingerbread)</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Mac mini</td>
+        <td>OSX 10.9 with Firefox, Chrome, Safari</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>HTC</td>
+        <td>iPad Retina</td>
+        <td>iOS 6.0.1</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>Nokia</td>
+        <td>Mac mini</td>
+        <td>OSX 10.9 with Firefox, Chrome, Safari</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Marco</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Galaxy S3</td>
+        <td>iOS 6.6.6</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antisatanique</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Mac mini</td>
+        <td>iOS 5.3</td>
+        <td>1280×1024 @ 72ppi</td>
+        <td>Antistatique</td>
+      </tr>
+      <tr>
+        <td>RIM</td>
+        <td>HTC Desire</td>
+        <td>Android 4.1.2 (Gingerbread) </td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Juli0</td>
+      </tr>
+      <tr>
+        <td>Samsung</td>
+        <td>Lumia 920</td>
+        <td>OSX 10.9 with Firefox, Chrome, Safari</td>
+        <td>1280×1024 @ 72ppi </td>
+        <td>Antistatique</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+*/
+.device-list{
+  h3{
+    text-align: center;
+    color: $chicago;
+  }
+  p{
+    text-align: center;
+    color: $chicago;
+    font-size: 15px;
+    position: relative;
+    margin-bottom: 65px;
+    &:after{
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 40px;
+      background-color: #d9d9d9;
+      left: calc(50% - 20px);
+      bottom: -20px;
+    }
+  }
+  .table-device{
+    border: 1px solid $alto;
+    color: $gray;
+    tbody{
+      tr{
+        &:hover{
+          background-color: $gallery;
+          color: $gray-dark;
+        }
+      }
+    }
+    tr{
+      border: none;
+      td{
+        border: none;
+        padding: 12px;
+      }
+      th{
+        border: none;
+        border-bottom: 1px solid $alto;
+        color: $gray-dark;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .tablesaw-sortable-ascending{
+        button{
+          &:after{
+            content: '△';
+            font-size: 13px;
+            margin-top: 4px;
+            margin-left: 12px;
+            right: auto;
+          }
+        }
+      }
+      .tablesaw-sortable-descending{
+        button{
+          &:after{
+            content: '▽';
+            font-size: 13px;
+            margin-top: 4px;
+            margin-left: 12px;
+            right: auto;
+          }
+        }
+      }
+    }
+    button{
+      outline: 0;
+    }
+  }
+}
