@@ -1,0 +1,100 @@
+/*doc
+---
+title: Give a Device - Form
+name: give-a-device-form
+category: Components - Device-Donation
+---
+
+
+```html_example
+<div class="device-donation-form">
+  <h2 class="h1">Merci pour votre don !</h2>
+  <p>Dites-nous quel type d’appareil vous voulez nous donner. Nous vous contacterons au plus vite.</p>
+  <form class="form-inline" role="form">
+    <div class="form-group col-md-3">
+      <label for="exampleInputEmail2">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="exampleInputPassword2">Last Name</label>
+      <input type="text" class="form-control" id="exampleInputPassword2" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="exampleInputPassword2">Your email</label>
+      <input type="email" class="form-control" id="exampleInputPassword2" placeholder="">
+    </div>
+    <p class="form-textarea">
+        <label for="textarea">Description of the device</label>
+        <textarea class="form-control" rows="3"></textarea>
+    </p>
+    <button type="submit" class="btn btn-default">Contribute</button>
+  </form>
+</div>
+```
+
+*/
+
+.device-donation-form{
+  color: $chicago;
+  p{
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  form{
+    margin-top: 40px;
+    .form-group{
+      label{
+        display: block;
+        font-weight: 400;
+      }
+      input{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: $chicago;
+        &:focus{
+          box-shadow: none;
+        }
+        &:hover{
+          border-color: $silver-chalice;
+        }
+      }
+    }
+    .col-md-3, .col-md-6{
+      padding-left: 0;
+    }
+    .col-md-6{
+      padding-right: 0;
+      input{
+        width: 100%;
+      }
+    }
+    .form-textarea{
+      display: inline-block;
+      width: 100%;
+      margin-top: 20px;
+      label{
+        font-weight: 400;
+        font-size: 14px;
+      }
+      textarea{
+        width: 100%;
+        resize: none;
+        height: 200px;
+        color: $chicago;
+        &:focus{
+          box-shadow: none;
+        }
+        &:hover{
+          border-color: $silver-chalice;
+        }
+      }
+    }
+    button{
+      display: block;
+      margin: 10px auto 0;
+      padding: 10px 30px;
+      font-family: "Source Sans Pro", sans-serif;
+      transition: all .1s ease-in-out;
+    }
+  }
+}
