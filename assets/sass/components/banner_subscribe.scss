@@ -44,9 +44,15 @@ category: Components - Content-Banners
     input{
       padding: 22px 100px 22px 15px;
       font-size: 13px;
+      &:focus{
+        box-shadow: none;
+      }
+      &:hover{
+        border-color: $silver-chalice;
+      }
     }
     button{
-      padding: 12px 35px;
+      padding: 13px 35px;
       font-size: 13px;
       transition: all .1s ease-in-out;
       &:hover{
