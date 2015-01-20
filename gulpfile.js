@@ -93,13 +93,11 @@ gulp.task('img', function() {
    if (argv.production) { console.log('[styles] Processing styles for production env.' ); }
    else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
-   return $.rubySass('assets/sass/main.scss', {sourcemap: !argv.production})
-       .on('error', $.notify.onError(function (error) {
-          console.log('Error', error.message);
-          if (!argv.production) {
-            return 'Message to the notifier: ' + error.message;
-          }
-       }))
+   return gulp.src('assets/sass/main.scss')
+     .pipe($.if(!argv.production, $.sourcemaps.init()))
+     .pipe($.sass({
+       errLogToConsole: true
+     }))
      .pipe($.autoprefixer({
        browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
      }))
@@ -168,13 +166,13 @@ gulp.task('serve', ['styles', 'scripts', 'twig'], function () {
   gulp.watch(['assets/js/**/*.js'], function() {
     runSequence('scripts', reload);
   });
-  
+
   gulp.watch(['assets/pages/**/*'], function() {
     // clean folder before compiling
     del.bind(null, ['styleguide/pages'])
     runSequence('twig', reload);
   });
-  
+
 });
 
 /**
