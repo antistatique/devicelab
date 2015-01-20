@@ -101,7 +101,7 @@ category: Layout - Typography
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
   </p>
   <small>
-    <span>Eddard Stark</span>, lord of Winterfel
+    <strong>Eddard Stark</strong>, lord of Winterfel
   </small>
 </blockquote>
 ```
@@ -114,22 +114,44 @@ category: Layout - Typography
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
   </p>
   <small>
-    <span>Eddard Stark</span>, lord of Winterfel
+    <strong>Eddard Stark</strong>, lord of Winterfel
   </small>
 </blockquote>
 ```
 */
 
-blockquote{
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
-  small{
-    font-weight: 400;
+blockquote {
+  color: $tarawera;
+  border: none;
+  font-weight: 100;
+  p {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: -30px;
+      height: 12px;
+      width: 18px;
+      background: url(../../img/quote-open.svg) no-repeat center left;
+    }
+    &:after{
+      content: '';
+      display: inline-block;
+      position: relative;
+      height: 12px;
+      width: 18px;
+      top: -5px;
+      background: url(../../img/quote-close.svg) no-repeat center right;
+    }
   }
-}
-
-blockquote small span{
-  font-weight: 700;
+  small{
+    text-align: right;
+    margin-top: 17px;
+    &:before{
+      content: none;
+    }
+  }
 }
 
 
@@ -183,6 +205,10 @@ category: Layout - Typography
  </p>
 ```
 */
+
+strong {
+  font-weight: 700;
+}
 
 /*doc
 ---
