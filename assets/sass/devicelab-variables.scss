@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/*doc
+---
+title: Colors
+name: a-colors
+category: Layout - Colors
+---
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3 col-xs-6">
+      <div style="background:#222;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray-darker</pre>
+    </div>
+
+  </div>
+</div>
+*/
+
+$white: #fff;
+$wild-sand: #f5f5f5;
+$gallery: #ececec;
+$gray-nickel: #c6c6c5;
+$nobel: #b5b5b5;
+$chicago: #575756;
+
+$pacific-blue: #0090d0;
+$deep-cerulean: #0073b4;
+$bismark: #4e7586;
+$blue-dianne: #214252;
+$teal-blue: #023952;
+
+//Jumbotron gradient
+$picton-blue: #26afe4;
+$curious-blue: #2688bf;
+
+$mandy: #e35757;
+$brink-pink: #fa638b;
+
+$jungle-green: #24a869;
