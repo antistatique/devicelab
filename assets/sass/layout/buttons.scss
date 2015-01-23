@@ -23,6 +23,9 @@ category: Layout - Buttons
 | <button type="button" class="btn btn-link">Link</button>       | <pre>btn btn-link</pre>    |
 */
 
+.btn {
+  transition: background 0.3s;
+}
 
 /*doc
 ---
