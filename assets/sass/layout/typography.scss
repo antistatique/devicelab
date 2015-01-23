@@ -115,6 +115,14 @@ category: Layout - Typography
 ```
 */
 
+blockquote {
+  border: none;
+  padding: 0;
+  p:before {
+    content: '\201C';
+  }
+}
+
 
 /*doc
 ---

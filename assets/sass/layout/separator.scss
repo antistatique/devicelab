@@ -1,0 +1,75 @@
+/*doc
+---
+title: Separator
+name: a-sep
+category: Layout - Separator
+---
+
+```html_example
+<hr>
+```
+*/
+
+hr {
+  height: 1px;
+  background: $gray-nickel;
+  border: none;
+  margin: 0 auto;
+}
+
+/*doc
+---
+title: Separator Clear
+name: b-sep
+category: Layout - Separator
+---
+
+```html_example
+<div class="jumbotron">
+  <br>
+  <hr class="separator-clear">
+  <br>
+</div>
+```
+*/
+
+.separator-clear {
+  background: $white;
+}
+
+/*doc
+---
+title: Spacer
+name: c-spacer
+category: Layout - Separator
+---
+
+```html_example
+hello
+<div class="spacer"></div>
+hello
+<div class="spacer spacer-xl"></div>
+hello
+<div class="spacer spacer-lg"></div>
+hello
+<div class="spacer spacer-sm"></div>
+hello
+<div class="spacer spacer-xs"></div>
+hello
+```
+*/
+
+.spacer {
+  height: 65px;
+  &.spacer-xl {height: 120px;}
+  &.spacer-lg {height: 90px;}
+  &.spacer-sm {height: 30px;}
+  &.spacer-xs {height: 10px;}
+  @media only screen and (max-width: 767px) {
+    height: 30px;
+    &.spacer-xl {height: 50px;}
+    &.spacer-lg {height: 50px;}
+    &.spacer-sm {height: 20px;}
+    &.spacer-xs {height: 10px;}
+  }
+}

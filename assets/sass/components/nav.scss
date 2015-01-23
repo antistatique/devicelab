@@ -2,8 +2,42 @@
 
 /*doc
 ---
+title: Simple nav
+name: a-navsimple
+category: Components - Nav
+---
+
+```html_example
+<ul class="nav-simple">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+```
+*/
+
+.nav-simple {
+  margin: 0;
+  padding: 0;
+  li, li a {display: inline;}
+  li a {
+    padding: 0 5px;
+    border-left: 1px solid;
+    font-weight: 300;
+  }
+  li.active a {font-weight: 700;}
+  li:first-child a {border-left: none;}
+}
+
+.jumbotron .nav-simple li a {
+  color: $white;
+  border-left-color: $white;
+}
+
+/*doc
+---
 title: Tabs
-name: a-tabs
+name: a-navtabs
 category: Components - Nav
 ---
 
@@ -31,7 +65,7 @@ category: Components - Nav
 /*doc
 ---
 title: Pills
-name: b-pills
+name: b-navpills
 category: Components - Nav
 ---
 

@@ -82,3 +82,28 @@ category: Layout - Buttons
 </p>
 ```
 */
+
+/*doc
+---
+title: Play button
+name: d-play-button
+category: Layout - Buttons
+---
+
+```html_example
+<div class="jumbotron">
+  <a href="#" class="btn-play">
+    <img src="img/play-button.svg" onerror="this.onerror=null; this.src='img/play-button.png'" />
+  </a>
+</div>
+```
+*/
+
+.btn-play {
+  display: inline-block;
+  max-width: 80px;
+  img {
+    max-width: 80px;
+    width: 100%;
+  }
+}
